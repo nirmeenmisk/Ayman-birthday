@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06110d">
+  <title>For Ayman | Chapter 21</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <canvas id="sprinkleCanvas"></canvas>
+
+  <main>
+
+    <!-- PASSWORD SCREEN -->
+    <section class="gate" id="passwordGate">
+      <div class="gate-card glass">
+
+        <div class="gate-mark">A<span>✦</span></div>
+
+        <p class="eyebrow">A PRIVATE BIRTHDAY EXPERIENCE</p>
+
+        <h1 id="gateTitle">
+          A little surprise<br>
+          <em>for Ayman.</em>
+        </h1>
+
+        <p class="gate-question">مين صحبيتك المفضلة؟</p>
+
+        <form id="passwordForm">
+          <input
+            id="passwordInput"
+            type="text"
+            placeholder="اكتب الإجابة هون..."
+            autocomplete="off"
+          >
+
+          <button class="primary-btn" type="submit">
+            Unlock the surprise ↗
+          </button>
+
+          <p class="error-message" id="passwordError">
+            مش هيك يا أيمن… جرّب مرة ثانية 😉
+          </p>
+        </form>
+
+        <p class="gate-foot">A SECRET MADE WITH LOVE · 2026</p>
+
+      </div>
+    </section>
+
+    <!-- WEBSITE -->
+    <div class="site-content hidden" id="siteContent">
+
+      <header class="topbar">
+        <a class="brand" href="#home">A<span>✦</span></a>
+
+        <div class="topbar-right">
+          <span class="chapter-label">CHAPTER 21</span>
+
+          <button class="sound-toggle" id="soundToggle">
+            <span class="sound-bars">
+              <i></i><i></i><i></i><i></i>
+            </span>
+            <span id="soundLabel">SOUND ON</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero section" id="home">
+
+        <div class="hero-copy reveal">
+
+          <p class="eyebrow">✦ TODAY IS YOUR DAY</p>
+
+          <p class="hero-pretitle">HAPPY BIRTHDAY</p>
+
+          <h1 class="hero-title">
+            Ayman<span class="title-dot">.</span>
+          </h1>
+
+          <div class="hero-meta">
+            <span>21 YEARS</span>
+            <b>✦</b>
+            <span>ONE OF A KIND</span>
+          </div>
+
+          <p class="hero-description">
+            مش كل يوم بنحتفل فيك   .<br>
+            Here's to your next beautiful chapter.
+          </p>
+
+          <a href="#letter" class="outline-btn">
+            Explore your surprise ↓
+          </a>
+
+        </div>
+
+        <div class="hero-art reveal">
+
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+
+          <div class="hero-number">21</div>
+
+          <div class="hero-seal">
+            <span>EST.</span>
+            <strong>2005</strong>
+            <small>THE ORIGINAL</small>
+          </div>
+
+          <div class="floating-star star-a">✦</div>
+          <div class="floating-star star-b">✧</div>
+
+        </div>
+
+        <div class="scroll-note">
+          SCROLL TO UNWRAP
+          <span></span>
+        </div>
+
+      </section>
+
+      <!-- BIRTHDAY LETTER -->
+      <section class="section letter-section" id="letter">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / A FEW WORDS</p>
+          <h2>A letter, <em>just for you.</em></h2>
+          <p>مش رسالة رسمية، لا تخاف. بس كم كلمة من قلب نارو.</p>
+        </div>
+
+        <article class="letter-card glass reveal">
+
+          <div class="letter-top">
+            <span>TO: AYMAN</span>
+            <span>21. THE NEW CHAPTER</span>
+          </div>
+
+          <div class="letter-content">
+
+            <p class="letter-dear">Dear Ayman,</p>
+
+            <p>كل عام وإنت بخير يا أيمن! 🤍</p>
+
+           
+
+            <p>
+              يمكن ما بحكيها كل يوم، بس وجودك بحياتي إشي  حلو.
+              شكراً على كل ضحكة، وكل موقف، وكل ذكرى حلوة.
+            </p>
+
+            <p class="letter-end">
+              Happy 21st Birthday!<br>
+              <span>Your favourite person,</span>
+              <strong>Naro ♡</strong>
+            </p>
+
+          </div>
+
+          <div class="letter-bottom">
+            <span>WITH LOVE</span>
+            <span>✦</span>
+            <span>ALWAYS YOUR FRIEND</span>
+          </div>
+
+        </article>
+      </section>
+
+      <!-- CANDLES -->
+      <section class="section candles-section" id="candles">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / MAKE A WISH</p>
+          <h2>Twenty-one <em>little lights.</em></h2>
+          <p>طفّي الشموع وحدة وحدة… أو اكبس على الزر.</p>
+        </div>
+
+        <div class="candle-stage glass reveal">
+
+          <div class="cake-glow"></div>
+
+          <div class="candles-grid" id="candlesGrid"></div>
+
+          <div class="cake">
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+            <div class="cake-plate"></div>
+          </div>
+
+          <p class="candles-count">
+            <strong id="candlesLeft">21</strong>
+            candles still glowing
+          </p>
+
+          <div class="candle-actions">
+
+            <button class="primary-btn" id="blowCandles">
+              Blow out the candles ✨
+            </button>
+
+            <button class="text-btn" id="relightCandles">
+              Relight them
+            </button>
+
+          </div>
+
+          <p class="wish-message" id="wishMessage">
+            Make a wish, Ayman.
+          </p>
+
+        </div>
+      </section>
+
+      <!-- GIFT -->
+      <section class="section gift-section" id="gift">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 / ONE MORE THING</p>
+          <h2>A little <em>something.</em></h2>
+          <p>في هدية إلك… بس لا تستعجل.</p>
+        </div>
+
+        <button class="gift-box reveal" id="giftBox">
+
+          <span class="gift-sparkle sparkle-one">✦</span>
+          <span class="gift-sparkle sparkle-two">✧</span>
+
+          <span class="gift-lid"></span>
+          <span class="gift-body"></span>
+          <span class="gift-ribbon-v"></span>
+          <span class="gift-ribbon-h"></span>
+          <span class="gift-bow"></span>
+
+          <span class="gift-caption">TAP TO OPEN</span>
+
+        </button>
+
+        <div class="gift-message glass hidden" id="giftMessage">
+
+          <span class="gift-icon">🎁</span>
+
+          <p class="eyebrow">YOUR UNLOCKED SURPRISE</p>
+
+          <h3>You're stuck with me.</h3>
+
+          <p>
+           له له بدك هدية و انا موجودة؟ 
+          </p>
+
+          <span class="gift-signature">— Naro</span>
+
+        </div>
+
+      </section>
+
+      <!-- PHOTO GALLERY -->
+      <section class="section gallery-section" id="gallery">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 / THE GOOD TIMES</p>
+          <h2>Moments worth <em>keeping.</em></h2>
+          <p>ضيف صوركم من جهازك وبتتحول الصفحة لألبوم ذكرياتكم.</p>
+        </div>
+
+        <div class="gallery-tools reveal">
+
+          <label class="upload-btn" for="photoUpload">
+            ＋ Add your photos
+          </label>
+
+          <input
+            id="photoUpload"
+            type="file"
+            accept="image/*"
+            multiple
+            hidden
+          >
+
+          <span id="photoCount">0 photos added</span>
+
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <div class="gallery-placeholder">
+            <span>01</span>
+            <b>Your favourite memory</b>
+            <small>ADD A PHOTO</small>
+          </div>
+
+          <div class="gallery-placeholder">
+            <span>02</span>
+            <b>The funniest moment</b>
+            <small>ADD A PHOTO</small>
+          </div>
+
+          <div class="gallery-placeholder">
+            <span>03</span>
+            <b>One for the memories</b>
+            <small>ADD A PHOTO</small>
+          </div>
+
+        </div>
+
+        <p class="gallery-note">
+          Your photos stay in this browser session.
+        </p>
+
+      </section>
+
+      <!-- FUNNY QUIZ -->
+      <section class="section quiz-section" id="quiz">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">05 / THE VERY IMPORTANT QUIZ</p>
+          <h2>How well do you <em>know yourself?</em></h2>
+          <p>اختبار علمي من نارو.</p>
+        </div>
+
+        <div class="quiz-card glass reveal">
+
+          <div class="quiz-progress">
+            <span id="quizProgress"></span>
+          </div>
+
+          <div class="quiz-top">
+            <span id="questionNumber">QUESTION 01 / 05</span>
+            <span>BE HONEST.</span>
+          </div>
+
+          <h3 id="questionText"></h3>
+
+          <div class="quiz-options" id="quizOptions"></div>
+
+          <p class="quiz-feedback" id="quizFeedback"></p>
+
+          <button class="primary-btn hidden" id="nextQuestion">
+            Next question ↗
+          </button>
+
+          <div class="quiz-result hidden" id="quizResult">
+
+            <span class="result-star">✦</span>
+
+            <h3>Officially certified.</h3>
+
+            <p>
+              مبروك! نجحت بالاختبار… لأن نارو لطيفة
+              وقررت ما ترسبك. 😂
+            </p>
+
+            <button class="outline-btn" id="restartQuiz">
+              Take it again ↻
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+
+        <div class="footer-star">✦</div>
+
+        <p class="eyebrow">
+          END OF THE SURPRISE · BEGINNING OF THE YEAR
+        </p>
+
+        <h2>
+          Stay golden,<br>
+          <em>Ayman.</em>
+        </h2>
+
+        <p>21 looks good on you.</p>
+
+        <div class="footer-line"></div>
+
+        <small>MADE WITH ♡ BY NARO · 2026</small>
+
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
